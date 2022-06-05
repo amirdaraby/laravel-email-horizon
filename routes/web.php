@@ -14,5 +14,6 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
+    \Illuminate\Support\Facades\Mail::to('test@example.com')->send(new \App\Mail\WelcomeMail());
     return view('welcome');
 });
